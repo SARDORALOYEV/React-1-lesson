@@ -1,2 +1,17 @@
 @import "tailwindcss";
 @plugin "daisyui";
+@keyframes gradient-green-red {
+  0% {
+    border-image-source: linear-gradient(90deg, #28a745, #00ff15); /* Yashil va qizil */
+  }
+  50% {
+    border-image-source: linear-gradient(90deg, #ff0000, #ffa200); /* Boshqa gradient */
+  }
+  100% {
+    border-image-source: linear-gradient(90deg, #28a745, #00ff15); /* Yashil va qizil */  }
+}
+
+.animate-gradient-green-red {
+  animation: gradient-green-red 4s ease-out infinite;
+  border-image-slice: 1;
+}
